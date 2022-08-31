@@ -1,0 +1,96 @@
+.header {
+    padding: 2.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        text-align: right;
+
+        @media only screen and (max-width: $bp-medium){
+            display: none;
+        }
+
+        &__item {
+            &:not(:first-child){
+                padding-left:3.3rem;
+            }
+        }
+        &__link {
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 2.9rem;
+            display: block;
+            color: $color-black;
+            transition: 0.3s all ease;
+
+            &:hover,
+            &:active {
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__icon {
+        display: none;
+        font-size: 5rem;
+        margin-right: 2rem;
+        float: right;
+        @media only screen and (max-width: $bp-medium){
+            display: inline-block;
+        }
+    }
+}
+
+.mobile {
+    position: fixed;
+    top: 9rem;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-primary;
+    z-index: 9;
+
+    &__menu {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        &__item {
+            margin: 1rem;
+        }
+
+        &__link{
+            &:link,
+            &:visited {
+                font-size: 3rem;
+                font-weight: 300;
+                color: $color-white;
+                display: inline-block;
+                padding: 1rem 2rem;
+
+                background: linear-gradient(120deg, transparent 0, transparent 50%, $color-secondary 50%);
+                background-size: 230%;
+                transition: all 0.4s ease;
+            }
+            &:hover,
+            &:active {
+                background-position: 100%;
+                color: $color-black;
+                transform: translateX(1rem);
+            }
+        }
+        
+    }
+}
+
+.fixed {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}

@@ -1,0 +1,49 @@
+.intro {
+
+    @media only screen and (max-width: $bp-small){
+        padding: 12rem 10rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 50% 45%;
+        grid-gap: 5%;
+
+        @media only screen and (max-width: $bp-small){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__left {
+        @media only screen and (max-width: $bp-small){
+            order: 2;
+            text-align: center;
+        }
+        h1 {
+            width: 88%;
+
+            @media only screen and (max-width: $bp-small){
+                width: 60%;
+                margin: auto;
+            }
+        }
+        p {
+            margin: 3rem 0;
+
+            @media only screen and (max-width: $bp-small){
+                width: 70%;
+                margin: 3rem auto;
+            }
+        }
+    }
+
+    &__right {
+        text-align: center;
+
+        img {
+            width: 24.3rem;
+            height: 24.3rem;
+            border-radius: 50%;
+        }
+    }
+}

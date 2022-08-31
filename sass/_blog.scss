@@ -1,0 +1,55 @@
+.blog {
+
+    @media only screen and (max-width: $bp-small){
+        padding: 10rem 5rem 5rem;
+    }
+    
+    .container {
+        max-width: 80rem;
+    }
+    
+    .heading {
+        font-weight: 700;
+        font-size: 4.4rem;
+        line-height: 6rem;
+        margin-bottom: 5.5rem;
+    }
+    &__item {
+        &:not(:last-child){
+            margin-bottom: 6rem;
+        }
+        .heading-tertiary {
+            font-weight: 500;
+            font-size: 3rem;
+            line-height: 4.4rem;
+            margin-bottom: 0.5rem;
+            a{
+                color: $color-secondary;
+                transition: 0.3s all ease;
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+
+        h6 {
+            font-size: 1.8rem;
+            line-height: 2.6rem;
+            color: $color-secondary;
+            font-weight: 400;
+
+            .date {
+                padding-right: 2rem;
+                border-right: 1px solid $color-black;
+            }
+            .tag {
+                padding-left: 2rem;
+                opacity: 0.6;
+            }
+        }
+        p {
+            width: 85%;
+            margin-top: 1rem;
+        }
+    }
+}

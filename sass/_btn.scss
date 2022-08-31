@@ -1,0 +1,19 @@
+.btn {
+    background-color: $color-primary;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.9rem;
+    color: $color-white;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    transition: 0.3s all ease;
+
+    &:hover {
+        background-color: $color-secondary;
+        border: 1px solid $color-primary;
+    }
+    &:active {
+        transform: translateY(-3px);
+    }
+}
